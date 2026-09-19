@@ -28,8 +28,9 @@ The model assumes that the remaining count of every rank is known before each be
 | `kelly_ratio.m` | Compute equal-stake Kelly fractions and log-growth metrics |
 | `merge_kelly_results.m` | Build the lookup table used by simulation |
 | `simulate_player.m` | Simulate bankroll paths with integer and table-limit constraints |
+| [`results/`](results/) | Complete validated exact-enumeration tables and a compact strategy lookup |
 
-Generated CSV and image files are intentionally excluded from version control. They can be regenerated from the MATLAB sources.
+The full exact results are published as CSV files because they allow every reported deck state and conditional distribution to be inspected without rerunning the expensive enumeration. Older duplicate tables, unfinished Monte Carlo outputs, and generated images remain excluded.
 
 ## Requirements
 
@@ -59,6 +60,8 @@ simulate_player(1000000, 25, 1)
 
 The exact enumeration can take a long time, especially for the third round.
 
+Validated snapshots of the complete outputs, their column definitions, checksums, and numerical validation summary are available in [`results/`](results/).
+
 ## Validation expectations
 
 For every generated result file:
@@ -72,7 +75,11 @@ For every generated result file:
 
 `simulate_player` records its simulation count, number of four-deal cycles, random seed, starting bankroll, bankruptcy threshold, maximum bet, and elapsed time in `final_wealth_stats.csv`. Passing the same seed reproduces the same random sequence on a compatible MATLAB release.
 
-The unfinished Word manuscript and older generated result copies are excluded because they contain stale calculations and template identity information.
+The unfinished Word manuscript and older generated result copies are excluded because they contain stale calculations and template identity information. Historical Monte Carlo outputs are also excluded because they predate fixes to zero-bet deck advancement and bankruptcy handling.
+
+## Related interactive tool
+
+[Tuibaozi Calculator](https://github.com/MegaKeqing/tuibaozi-calculator) ([live demo](https://megakeqing.github.io/tuibaozi-calculator/)) is an earlier browser-based companion that estimates one-deal win probabilities and expected returns by Monte Carlo simulation for a user-entered remaining deck. Its dealing and payout rules match this project, but its sampled estimates are not the source of the exact values reported here. This repository provides the exact enumeration, full joint distributions, and Kelly analysis; the calculator is useful for interactive exploration and approximate checks.
 
 ## License
 

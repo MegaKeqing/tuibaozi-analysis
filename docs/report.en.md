@@ -196,6 +196,10 @@ The results describe the stated mathematical model. They are not gambling advice
 
 The full command sequence is documented in the repository [`README.md`](../README.md). The workflow runs the four exact enumerations, adds volatility and Kelly columns to every result file, builds the lookup table, and then runs a seeded simulation.
 
+The complete four-deal enumeration tables, column definitions, validation values, and SHA-256 checksums are published in [`results/`](../results/). They are deterministic exact-enumeration outputs rather than Monte Carlo estimates, so readers can inspect all 49,116 deck states without rerunning the expensive third-deal enumeration.
+
+The author's earlier browser-based [Tuibaozi Calculator](https://github.com/MegaKeqing/tuibaozi-calculator) is also available as a [live demo](https://megakeqing.github.io/tuibaozi-calculator/). It uses Monte Carlo simulation to approximate one-deal probabilities and expected returns for a user-entered remaining deck. Its rules match this report, but it is an interactive approximation tool rather than the source of the exact values reported here.
+
 An open-source reproduction should verify these invariants:
 
 - deck-state probabilities sum to approximately 1 in every deal;
