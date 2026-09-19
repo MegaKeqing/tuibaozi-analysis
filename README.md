@@ -1,6 +1,6 @@
 # Tuibaozi: positive-edge betting under a landlord-favored tie rule
 
-[中文研究报告](docs/report.zh-CN.md) | [English report](docs/report.en.md)
+[中文 README](README.zh-CN.md) | [中文研究报告](docs/report.zh-CN.md) | [English report](docs/report.en.md)
 
 The central result is counterintuitive: ties go to the landlord and a single farmer wins only about 45.85% of deals, so the rules appear to favor the landlord. However, a winning pair pays two units of net profit, which more than offsets the lower win rate. The exact full-deck expected return of a one-unit bet on one farmer is therefore `+0.0088988`, or about `+0.8899%`.
 
