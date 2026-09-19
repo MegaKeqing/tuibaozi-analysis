@@ -1,5 +1,7 @@
 # Tuibaozi probability and betting analysis
 
+[中文研究报告](docs/report.zh-CN.md) | [English report](docs/report.en.md)
+
 This repository studies a four-hand card game played with four copies of ranks 1 through 8. It provides exact state enumeration for four consecutive deals, conditional return distributions, equal-stake Kelly sizing, and Monte Carlo bankroll simulations.
 
 The project name is a transliteration of 推豹子. The code is intended for probability and optimization research, not as gambling advice or a promise of profit.
