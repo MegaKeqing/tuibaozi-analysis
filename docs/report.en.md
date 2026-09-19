@@ -1,10 +1,16 @@
-# Exact probabilities and Kelly betting for Tuibaozi
+# Tuibaozi: positive-edge betting under a landlord-favored tie rule
 
 [中文版](report.zh-CN.md)
 
+## Main result
+
+Ties go to the landlord, and a single farmer position wins only about 45.85% of deals, so the rules appear to favor the landlord. A winning farmer pair, however, earns two units of net profit. That payout is sufficient to offset the lower win rate: the exact full-deck expected return of a one-unit bet on one farmer is `+0.0088988`, or approximately `+0.8899%`.
+
+A bettor who also observes the remaining deck, skips negative-expectation states, and sizes equal bets across the three farmer positions from their joint return distribution can achieve positive expected long-run log growth within this model. The edge comes from payout asymmetry, deck information, and strategy selection—not from a farmer win rate above 50%—and it is not a guarantee of real-world profit.
+
 ## Abstract
 
-This report studies a four-hand card game played with a 32-card deck containing four copies of ranks 1 through 8. A landlord and three farmer positions each receive two cards. Exact enumeration is used to obtain the outcome distribution for every observable deck state over four consecutive deals. The resulting distributions are used to compare single-farmer, two-gate, and all-three-farmer bets and to calculate an equal-stake Kelly strategy.
+This report studies a four-hand card game whose settlement rules appear to favor the landlord but still allow a rational bettor to obtain positive expected returns. The 32-card deck contains four copies of ranks 1 through 8, and a landlord and three farmer positions each receive two cards. Ties go to the landlord, while a farmer pair wins two units of net profit. Exact enumeration is used to obtain the outcome distribution for every observable deck state over four consecutive deals. The resulting distributions are used to compare single-farmer, two-gate, and all-three-farmer bets and to calculate an equal-stake Kelly strategy.
 
 The unconditional expected net return of a one-unit bet on one farmer is 0.0088988. This average is the same in every deal, but conditional returns spread out as the deck becomes smaller. Deals two, three, and four contain 1, 559, and 653 negative-expectation farmer states respectively. A positive unconditional average therefore does not imply that every observable state should be bet. A state-aware strategy skips negative-expectation states and sizes positive bets from the full joint return distribution.
 
@@ -199,4 +205,6 @@ An open-source reproduction should verify these invariants:
 
 ## Conclusion
 
-A farmer bet from the full deck has an expected advantage of approximately 0.8899% per unit stake, largely because a winning pair pays twice the net amount of a normal win. The unconditional mean remains the same over four deals, but conditional risk and return diverge sharply in later deck states. Within the model, a consistent strategy observes the remaining deck, skips negative-expectation states, and uses the joint farmer distribution to calculate an equal-stake Kelly fraction.
+The win conditions do favor the landlord: ties go to the landlord, and one farmer position wins only about 45.85% of deals. Win probability is not return, however. The two-unit net payout on a winning pair gives a full-deck farmer bet an expected advantage of approximately 0.8899% per unit stake. This is the central counterintuitive result of the study.
+
+The unconditional edge remains the same over four deals, but conditional risk and return diverge sharply in later deck states. A bettor should therefore avoid betting mechanically on every deal. Within the model, observing the remaining deck, skipping negative-expectation states, and calculating an equal-stake Kelly fraction from the joint distribution of the three farmer returns produces positive expected log growth. Commissions, observation errors, and rule changes can eliminate that edge in practice.

@@ -1,8 +1,10 @@
-# Tuibaozi probability and betting analysis
+# Tuibaozi: positive-edge betting under a landlord-favored tie rule
 
 [中文研究报告](docs/report.zh-CN.md) | [English report](docs/report.en.md)
 
-This repository studies a four-hand card game played with four copies of ranks 1 through 8. It provides exact state enumeration for four consecutive deals, conditional return distributions, equal-stake Kelly sizing, and Monte Carlo bankroll simulations.
+The central result is counterintuitive: ties go to the landlord and a single farmer wins only about 45.85% of deals, so the rules appear to favor the landlord. However, a winning pair pays two units of net profit, which more than offsets the lower win rate. The exact full-deck expected return of a one-unit bet on one farmer is therefore `+0.0088988`, or about `+0.8899%`.
+
+This repository shows how a bettor can turn that payout edge into positive expected growth under the stated model: observe the remaining deck, skip negative-expectation states, and size equal bets across the three farmer positions from their joint return distribution. It provides exact state enumeration for four consecutive deals, conditional return distributions, equal-stake Kelly sizing, and Monte Carlo bankroll simulations.
 
 The project name is a transliteration of 推豹子. The code is intended for probability and optimization research, not as gambling advice or a promise of profit.
 
