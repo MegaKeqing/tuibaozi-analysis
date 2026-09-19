@@ -1,0 +1,19 @@
+# Generated analysis results
+*_results.csv
+results.csv
+final_wealth_*.csv
+final_wealth_*.png
+
+# Historical and working data
+data/
+epoch25/
+
+# Unfinished manuscript with template identity information
+*.docx
+
+# MATLAB and editor files
+*.asv
+*.m~
+.DS_Store
+Thumbs.db
+MathWorks/

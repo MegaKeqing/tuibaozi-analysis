@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+title: "Tuibaozi probability and betting analysis"
+type: software
+authors:
+  - name: "MegaKeqing"
+repository-code: "https://github.com/MegaKeqing/tuibaozi-analysis"
+license: MIT
+version: 1.0.0
+date-released: 2026-09-19
